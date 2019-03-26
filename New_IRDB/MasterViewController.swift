@@ -89,7 +89,7 @@ class MasterViewController: UITableViewController {
         cell.textLabel!.text = mediaName
         
         let mediaYear = (rebootDataModel?.franchise[indexPath.section].entries[indexPath.row].yearStart)!
-        cell.textLabel!.text = mediaYear
+        cell.detailTextLabel!.text = mediaYear
 
         return cell
     }
