@@ -14,6 +14,8 @@
 		73FC4FF5224840A000D7089E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FC4FF4224840A000D7089E /* Assets.xcassets */; };
 		73FC4FF8224840A000D7089E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FC4FF6224840A000D7089E /* LaunchScreen.storyboard */; };
 		73FC5003224840A000D7089E /* New_IRDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC5002224840A000D7089E /* New_IRDBTests.swift */; };
+		73FC500E22490BCB00D7089E /* MovieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC500D22490BCB00D7089E /* MovieDataModel.swift */; };
+		73FC501022490CE300D7089E /* MovieDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC500F22490CE300D7089E /* MovieDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		73FC4FFE224840A000D7089E /* New_IRDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = New_IRDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FC5002224840A000D7089E /* New_IRDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_IRDBTests.swift; sourceTree = "<group>"; };
 		73FC5004224840A000D7089E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73FC500D22490BCB00D7089E /* MovieDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataModel.swift; sourceTree = "<group>"; };
+		73FC500F22490CE300D7089E /* MovieDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				73FC4FF4224840A000D7089E /* Assets.xcassets */,
 				73FC4FF6224840A000D7089E /* LaunchScreen.storyboard */,
 				73FC4FF9224840A000D7089E /* Info.plist */,
+				73FC500D22490BCB00D7089E /* MovieDataModel.swift */,
+				73FC500F22490CE300D7089E /* MovieDataController.swift */,
 			);
 			path = New_IRDB;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			files = (
 				73FC4FF02248409D00D7089E /* DetailViewController.swift in Sources */,
 				73FC4FEE2248409D00D7089E /* MasterViewController.swift in Sources */,
+				73FC500E22490BCB00D7089E /* MovieDataModel.swift in Sources */,
+				73FC501022490CE300D7089E /* MovieDataController.swift in Sources */,
 				73FC4FEC2248409D00D7089E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
