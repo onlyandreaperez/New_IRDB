@@ -53,15 +53,21 @@ class DetailViewController: UIViewController {
 //            if let label = description {
 //                label.text = detail.description
 //            }
-//            if let label = summary{
-//                label.text = detail.summary
-//
-//            }
+            if let episodes = detail.episodes{
+                episode.text = "\(episodes)"
+
+            }
             moviename.text = detail.name
             year.text = detail.yearStart
             format.text = detail.format
-            episode.text = "\(detail.episodes)"
             studio.text = detail.studio
+            topLabel.text = detail.description
+            bottomLabel.text = detail.summary
+            
+            let url = URL(string: detail.imageURL)
+            let data = try! Data(contentsOf: url!)
+            let image = UIImage(data: data)
+            picture.image = image
         }
         
     }
