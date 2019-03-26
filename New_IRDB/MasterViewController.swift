@@ -11,10 +11,10 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    let dataController: DetailViewController? = nil
+    let dataController = MovieDataController()
     var rebootDataModel: MovieDataModel? {
         didSet{
-            
+            tableView.reloadData()
         }
     }
     var objects = [Any]()
@@ -31,17 +31,17 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        //new
+        let titleImage = UIImage(named: "irdblogo")
+        let titleImageView = UIImageView(image: titleImage)
+        navigationItem.titleView = titleImageView
+        
+        dataController.getRebootData(completion: {dataModel in
+            self.rebootDataModel = dataModel
+        })
+        
     }
 
-    //new
-    let titleImage = UIImage(named: "irdb")
-    let titleImageView = UIImageView(image: titleImage)
-    navigationItem.titleView = titleImageView
-    
-    dataController.getRebootData(completion: {dataModel in
-    self.rebootDataModel = dataModel
-    })
-    
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
@@ -89,9 +89,9 @@ class MasterViewController: UITableViewController {
         cell.textLabel!.text = mediaName
         
         let mediaYear = (rebootDataModel?.franchise[indexPath.section].entries[indexPath.row].yearStart)!
-        cell.detailTextLabel!.text = mediaYear
+        cell.textLabel!.text = mediaYear
 
-
+        return cell
     }
-
+    
 }
